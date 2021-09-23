@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects | ronak mutha</title>
+    <link rel="stylesheet" href='/style.css'>
+</head>
+
+
+<nav class='navigation container'>
+    <div class='nav-brand'>ronak mutha</div>
+    <ul class='list-non-bullet nav-pills'>
+        <li class='list-item-inline'><a class='link' href="/index.html">home</a></li>
+        <li class='list-item-inline'><a class='link' href="/projects.html">projects</a></li>
+        <li class='list-item-inline'><a class='link link-active' href="/blogs.html">blogs</a></li>
+    </ul>
+</nav>
+
+<article class='.container container-center showcase-blog'>
+    <h1>JavaScript Arrays and its methods: Still a Better Love Story than Twilight</h1>
+    <div class='container-blog-details'> <img class='author-image' src='/images/iron-man.png' alt='author'>
+        <small class='author-name'>Ronak Mutha</small>
+        <small class='publish-date'>September, 2021</small>
+    </div>
+
+    <p>Before we start, you might be wondering why this title?
+        <pre>
+    Simple Answer - ClickBait.
+    Longer version - Read the blog.
+    </pre>
+    </p>
+    <p>Unlike my last post, this post would be short. We'll quickly go through the methods and what they do.</p>
+
+    <p>But before that let's start with our favourite question.</p>
+
+    <h2>What is an Array in JavaScript?</h2>
+
+    <p>Arrays are list-like objects whose prototype has methods to perform traversal and mutation operations. In simpler
+        words, array is like a list where you store your elements and can access them or change them as per your need.
+    </p>
+    <p>Now you would be like, okay Ronak, we got that it is like a list where we store our elements but what are these
+        elements? Don't worry I'll make you learn most of basic things about array today, without that we're not leaving
+        😉.</p>
+
+    <p>When I say elements, in JavaScript it can be anything from numbers to strings to objects to even arrays. Yes, you
+        heard it right, we call them as multidimensional arrays. And yeah, let's not forget about the word
+        <strong>traversing</strong> and <strong>mutating</strong>. If you hail from non-english speaking and
+        non-technical
+        background these words are hard to digest at first. So let me make it simple for you. Remember I said earlier
+        array is like list of elements, <em>Traversing means going through that list</em> and <em>Mutating means
+            changing the list by performing some action like deleting/adding/modifying... and so on</em></p>
+
+    <p> In javaScript particularly, arrays are hashtable based and they not necessarily are placed in contiguous memory
+        locations(don't worry it just means <em>consecutive blocks of memory</em>, funny things we learnt during
+        engineering which we don't even remember now and have to run a google search). JavaScript arrays are index based
+        and we can set and fetch items based on their indices. Arrays are <strong>zero indexed</strong>, means 1st
+        element always starts at 0th position. Remember, <code>array_name[position]</code> where <em>position = 0, 1, 2,
+            3, .... n</em> are arrays. And the one having <em>position = "some random string" </em> are objects. And
+        those <em>some random strings</em> are called Keys. We'll not go into deep now, this was just to let you know
+        the difference.</p>
+
+    <pre>You can create array using different methods, simplest being:
+
+        <code>let fruits = ['Apple', 'Banana'];
+        </code>
+You can get the length of fruits array using <code>length</code> property of array object.
+        console.log(fruits.length); //prints 2
+    </pre>
+    <p>Alright enough information about arrays. Let's talk about different array methods.</p>
+
+    <h2>Different Array methods:</h2>
+    <ul>
+        <li>
+            <h3>push()</h3>
+            <p>As the name suggests, this method pushes the element at the end of an array. This method mutates the
+                array on which it is called.</p>
+            <p>push(elementsToBePushed) method takes element(s) to be pushed to array as arguments.</p>
+            <p>It returns new length of array on which it was called.</p>
+            <code>let newLength = fruits.push('Orange')
+                // fruits = ["Apple", "Banana", "Orange"], newLength = 3</code>
+        </li>
+
+        <li>
+            <h3>pop()</h3>
+            <p>pop() method removes the element from an array. This method mutates the array on which it is called.</p>
+            <p>pop() method doesn't need any argument.</p>
+            <p>It returns new length of array on which it was called or undefined if array is empty.</p>
+            <code>let newLength = fruits.pop()
+                // fruits = ["Apple"], newLength = 1</code>
+        </li>
+
+        <li>
+            <h3>shift()</h3>
+            <p>shift() method removes the first element from an array. This method mutates the array on which it is
+                called.</p>
+            <p>shift() method doesn't need any argument.</p>
+            <p>It returns the removed element from the array or undefined if array is empty.</p>
+            <code>let firstElement = fruits.shift()
+                // fruits = ["Banana"], firstElement = Apple</code>
+        </li>
+
+
+        <li>
+            <h3>unshift()</h3>
+            <p>unshift() method adds one or more elements to the beginning of an array. This method mutates the array on
+                which it is called.</p>
+            <p>unshift(elementsToBeAddedAtBeginning) method doesn't need any argument.</p>
+            <p>It returns the new length of an array on which it was called.</p>
+            <code>let addElementAtStart = fruits.unshift("Orange")
+                // fruits = ["Orange", "Apple", "Banana"], addElementAtStart = 3</code>
+        </li>
+
+    </ul>
+
+    <p>I'd like to stop our journey to array methods here as I want to get into neogcamp, as well. And that requires preparation. If I go on writing these articles, it would never end. But before saying those <strong>three magical words</strong>, I would like to add something on another method about which I learned today.</p>
+
+    <h3>forEach()</h3>
+    <p>forEach() method executes a provided function once for each array element. It doesn't mutate the array on which it is called. However, the callbackFunction provided to it may do so.</p>
+    <p>forEach(callbackFunction(element, index, array), this) method takes callbackFunction() as an argument. callbackFunction() in turn can take one to three arguments. Out of these three, only element i.e. Current element being processed is mandatory. </p>
+    <p>It returns the undefined.</p>
+    <code>fruit.forEach(element => console.log(element));</code>
+    <p>This will print following output on console:
+    <pre>Apple
+Banana
+    </pre>
+
+    <p>Wow, seems magic, no need of writing those long for loops. Okay this is something that all might get after reading first 2-3 lines of documentation. But what was that you read and wanted to share so much about.</p>
+
+    <p>No more suspense, here you go:</p>
+    <p>
+        In JavaScript forEach may be convenient but it has shortcomings, like <em>There is no way to stop or break a forEach() loop other than by throwing an exception, forEach expects a synchronous function. forEach() does not wait for promises or async functions. It runs slower than for loops. for...of loop which functions quite similar to forEach() can be used instead. I It’s worth using forEach() only when you already have a function to invoke on every array element.  In this case, it’s a one-liner, with zero performance degradation.</em>
+    </p>
+
+    <p>Optimization and stuff is always fascinating to hear, but always remember:</p>
+
+    <figure>
+        <blockquote>
+            <p><b>Premature optimization is the root of all evil.</b></p>
+        </blockquote>
+        <figcaption> -Sir Tony Hoare or Donald Knuth</figcaption>
+    </figure>
+
+    <p>So I guess it's that time of blog which I hate the most, goodbyes, but without goodbyes there wouldn't be
+        greetings. On that note, here are those three magical words you've been waiting to hear(in this case see)</p>
+
+    <p><strong>See you soon.</strong></p>
+
+    <img class='blog-img' src='/images/tata-bye-bye.gif' alt="Goodbye">
+
+</article>
+
+<footer class='footer'>
+    <div class='footer-header'>connect with me</div>
+    <ul class='social-links list-non-bullet'>
+        <li class='list-item-inline'><a class='link' href="https://github.com/Ronak-Mutha">github</a></li>
+        <li class='list-item-inline'><a class='link' href="https://www.linkedin.com/in/ronak-d-mutha">linkedin</a>
+        </li>
+        <li class='list-item-inline'><a class='link' href="https://twitter.com/ronakmutha97">Twitter</a></li>
+    </ul>
+</footer>
+</body>
+
+</html>
