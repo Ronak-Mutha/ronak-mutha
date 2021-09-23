@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
 :root {
     --primary-color: #10B981;
     --off-white: #F3F4F6;
@@ -24,6 +28,10 @@ hr {
 .container-center {
     max-width: 600px;
     margin: auto;
+}
+
+.container p {
+    text-align: left;
 }
 
 .container-blog-details {
@@ -59,14 +67,20 @@ hr {
 }
 
 .link-primary {
+    max-width: 140px;
+    padding: 0.6rem 1.2rem;
+    margin: 1rem auto;
     background-color: var(--primary-color);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     color: #fff;
 }
 
 .link-secondary {
+    max-width: 140px;
+    padding: 0.6rem 1.2rem;
+    margin: 1rem;
     color: var(--primary-color);
-    border-radius: 0.5rem;
+    border-radius: 1rem;
     border: 1px solid var(--primary-color);
 
 }
@@ -191,6 +205,35 @@ hr {
 .showcase-blog {
     padding-bottom: 6rem;
   }
+
+.blog-img {
+    max-height: 350px;
+    display: block;
+    margin: auto;
+
+}
+
+blockquote {
+    margin: 0;
+}
+
+figure {
+    padding: 15px;
+    background: #eee;
+    border-radius: 5px;
+}
+
+blockquote p::before {
+    content: '\201C';
+}
+
+blockquote p::after {
+    content: '\201D';
+}
+
+figcaption {
+    text-align: right;
+}
   
   @media (max-width: 900px) {
     body {
@@ -209,5 +252,6 @@ hr {
   
     .link-primary {
       display: block;
+
     }
   }
