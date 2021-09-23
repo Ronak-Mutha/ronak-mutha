@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>projects | ronak mutha</title>
+    <link rel="stylesheet" href='/style.css'>
+</head>
+
+
+<nav class='navigation container'>
+    <div class='nav-brand'>ronak mutha</div>
+    <ul class='list-non-bullet nav-pills'>
+        <li class='list-item-inline'><a class='link' href="/index.html">home</a></li>
+        <li class='list-item-inline'><a class='link' href="/projects.html">projects</a></li>
+        <li class='list-item-inline'><a class='link link-active' href="/blogs.html">blogs</a></li>
+    </ul>
+</nav>
+
+<article class='.container container-center showcase-blog'>
+    <h1>Ultimate guide for Emmet: Speed up your html workflow</h1>
+    <div class='container-blog-details'> <img class='author-image' src='/images/iron-man.png' alt='author'>
+        <small class='author-name'>Ronak Mutha</small>
+        <small class='publish-date'>September, 2021</small>
+    </div>
+    <p> <em>All right, all right, thank you guys, thank you so much, I would like to thanks my .... Nah we're not
+            doing that. This is a blogpost not an award ceremony, so nuff of filling the blogs with words, let's get
+            started.</em></p>
+    <p>Finally I decided to write a blogpost.(I was compelled to, JK ). As it was compulsory to write a
+        blogpost(technical or non-technical) for neogcamp level One admissions, that too without plagiarism 😧, so I
+        thought what can I write 🤔🤔 as I had never written anything before, except for the exam papers, of course
+        'coz grades. But when I sat down thinking for a topic to write, I came up with tons of ideas. Most of them
+        being something that I use in my day to day life, like Emmet, VSCode plugins/shortcuts, Web-development
+        path/roles/technologies, JavaScript/TypeScript basics and advanced, HTML, CSS selectors/advanced
+        selectors/flex/grid, you know how mind is when you need one idea, sometimes it gives you 1000 and sometimes
+        not even one. So finally, I chose two topics 🥳, this post will be about my most used plugin apart from Live
+        server in VS Code, <strong>Emmet</strong>. And in next post we will talk about <strong>JavaScript
+            arrays</strong>.</p>
+
+    <h2>So what is Emmet???</h2>
+    <p>Emmet is an essential toolkit for web-developers writing HTML & CSS. You've already known how to use Emmet
+        abbreviations: its syntax is inspired by CSS selectors. According to the official Emmet
+        Documentation, <em>Emmet is a plugin for many popular text editors which greatly improves HTML & CSS
+            workflow</em>.
+    </p>
+
+    <p> As you now know what Emmet is, let's move on to the main part...</p>
+
+    <h2> How do we use Emmet??? </h2>
+
+    <p> Well, I don't want this post to be way too long. So we'll learn how to use Emmet to increase speed our HTML
+        workflow. For the rest part an official Emmet cheat-sheet will be attached at the end of this blog, if you want
+        to print it out for reference.</p>
+
+    <p><b>Let's get familiar with important symbols/terms used in Emmet, so you won't go blank while referring
+            cheatsheet.</b> </p>
+
+    <ol>
+        <li>
+            <h3>Child: >, Sibling: +, and Climb up(Immediate Parent element): ^</h3>
+            <p>In HTML, we often use term parent, child and sibling. So, what is parent, sibling and child? Let's
+                understand this with an example.</p>
+
+            <pre>Example:
+                <code>
+                    div+div>p>span+em^bq
+                </code>
+Above Emmet shortcut will produce the following result,
+&lt;div&gt;&lt;/div&gt;
+&lt;div&gt;
+    &lt;p&gt;&lt;span&gt;&lt;/span&gt;&lt;em&gt;&lt;/em&gt;&lt;/p&gt;
+    &lt;blockquote&gt;&lt;/blockquote&gt;
+&lt;/div>
+            </pre>
+
+            <p>Didn't understand anything? Don't worry, I'm here to explain. After this blog, you won't go back to
+                typing all code for HTML and CSS. </p>
+
+            <ol>
+                <li> In the above example, first <code>div</code> is printed as <em>div</em> element. </li>
+                <li><strong>'+'</strong> denotes next element will be sibling of previous tag. Sibling in HTML DOM tree
+                    is similar to sibling in a family tree, Sibling in HTML DOM tree means someone which is at same
+                    heirarchy level and of same parent element in HTML Document tree.</li>
+                <li>Hence, next <code>div</code> tag is printed at same heirarchy level.</li>
+                <li>Then comes <strong>'>'</strong>, denotes next tag will be child element of previous tag.
+                    Child in HTML DOM Tree also resembles children in family tree. Child element will be at next level
+                    in HTML DOM tree of parent element.</li>
+                <li>Hence, we see -
+                    <pre>p inside of div as it is children of div
+span inside of p as it is children of p
+em at same level as span as it is sibling of span 
+                    </pre>
+                </li>
+                <li>Then comes the last and final symbol of child, parent and sibling thing, <strong>'^'</strong> is
+                    used to represent the same level as immediate parent. Anything after <strong>'^'</strong> will climb
+                    up to the immediate parent level.</li>
+                <li>Hence, we see -
+                    <pre> blockquote inside of div and as sibling of p <em>instead of being child of p</em></pre>
+                </li>
+            </ol>
+            <p> Alright, long nuff explaination about the parent, child & sibling thing now let's know some more things
+                we can do with Emmet.</p>
+
+        <li>
+            <h3> Multiplication: *</h3>
+            <p>This is used for having multiple elements. The number after <strong>*</strong> is used to convey Emment
+                that we want this many elements. Refer to following example to understand what I want to say.</p>
+
+            <pre>Example:
+                <code>ul>li*5</code>
+This will produce output with 5 <code>li</code> elements.
+&lt;ul&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                </pre>
+
+        </li>
+
+        </li>
+        <h3>ID: # and Class attributes: .</h3>
+        <p>ID and Class attributes can be written by using # and . symbol respectively.</p>
+        <pre>Example:
+            <code>#header</code>
+
+This will produce :
+&lt;div id="header"&gt;&lt;/div&gt;
+
+Example:
+           <code>.header</code>
+
+This will produce :
+&lt;div class="header"&gt;&lt;/div&gt;
+</pre>
+
+        <p>Remember when <strong>#</strong> and <strong>.</strong> are used without prepending them with any HTML tag
+            will produce output with <em>div tag</em> as default.</p>
+        </li>
+
+        <li>
+            <h3>Custom Attributes</h3>
+            <p>To add custom attributes to an element use following syntax:</p>
+            <pre>Example:
+                <code>p[title="Hello world"]</code>
+
+This will produce :
+&lt;p title="Hello world"&gt;&lt;/p&gt;
+            </pre>
+
+        </li>
+
+        <li>
+            <h3>Adding Text inside an Element: {}</h3>
+            <p>To add text directly inside an element using Emment, use following syntax:</p>
+            <pre>Example:
+                <code>a{Click me}</code>
+
+This will produce :
+&lt;a href=""&gt;Click me&lt;/a&gt;
+            </pre>
+
+        </li>
+
+        <li>
+            <h3>Dynamically numbering Items: $</h3>
+            <p><em>Fed up of naming items as item1 item2 item3 manually?</em></p>
+            <p> Don't worry Emmet will take care of that for you. With <strong>'$</strong> we can now give numbering to our items or anything you want to number in increasing fashion. As always let's move head to know more with an example.</p>
+            <pre>Example:
+                <code>ul>li.item$*5</code>
+
+This will produce output with 5 <code>li</code> elements.
+&lt;ul&gt;
+    &lt;li class="item1"&gt;&lt;/li&gt;
+    &lt;li class="item2"&gt;&lt;/li&gt;
+    &lt;li class="item3"&gt;&lt;/li&gt;
+    &lt;li class="item4"&gt;&lt;/li&gt;
+    &lt;li class="item5"&gt;&lt;/li&gt;
+&lt;/ul&gt;
+                                </pre>
+            </pre>
+
+        </li>
+    </ol>
+
+<p>Okay, that's enough learning for this blog. Now go outside and enjoy your life. Learning is a lifelong process but life is not so long, so go out now and meet your friends, spend time with your family or just do whatever makes you happy. Have a proper balance in work, learning and life.(Remember breathing is not living life, it's just being alive and both are different). No one knows what'll happen tomorrow. All we have with us is now so live in it.</p>
+
+<p>On that note, signing off your host, dost, and in this case blog author, Ronak.</p>
+
+<p><b>P.S.: Tell, Tanay to select me for the neogcamp.</b></p>
+
+<p><b>P.P.S: If Tanay is reading this,</b>
+        <img class='blog-img' src="/images/gustakhi-maaf.jpg" alt="Gustakhi Maaf Sirji">
+
+</p>
+
+
+
+
+    <a href='https://docs.emmet.io/cheat-sheet/' class='link link-primary' target='_blank' rel='noopener'>Emmet
+        cheat-sheet</a>
+</article>
+
+<footer class='footer'>
+    <div class='footer-header'>connect with me</div>
+    <ul class='social-links list-non-bullet'>
+        <li class='list-item-inline'><a class='link' href="https://github.com/Ronak-Mutha">github</a></li>
+        <li class='list-item-inline'><a class='link' href="https://www.linkedin.com/in/ronak-d-mutha">linkedin</a>
+        </li>
+        <li class='list-item-inline'><a class='link' href="https://twitter.com/ronakmutha97">Twitter</a></li>
+    </ul>
+</footer>
+</body>
+
+</html>
