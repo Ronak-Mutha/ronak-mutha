@@ -91,6 +91,11 @@ hr {
     list-style: none;
 }
 
+.list-reverse {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
 .list-item-inline {
     display: inline;
     padding: 0rem 0.5rem;
